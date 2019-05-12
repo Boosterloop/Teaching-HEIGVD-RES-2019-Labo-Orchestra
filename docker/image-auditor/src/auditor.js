@@ -56,7 +56,7 @@ function update() {
   musicians.forEach(updateMap);
 }
 
-setInterval(update, 5000);
+setInterval(update, 1000);
 
 const server = net.createServer();
 server.listen(2205);
