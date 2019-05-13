@@ -121,13 +121,13 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | In a JavaScript program, if we have an object, how can we **serialize it in JSON**? |
-| | JSON.stringify(object)  |
+| | `JSON.stringify(object)`  |
 |Question | What is **npm**?  |
 | | Le gestionnaire de paquets de Node.js |
 |Question | What is the `npm install` command and what is the purpose of the `--save` flag?  |
 | | Cette commande permet d'installer un module npm. `--save` permet de mettre à jour le `package.json` |
 |Question | How can we use the `https://www.npmjs.com/` web site?  |
-| | *Enter your response here...*  |
+| | On peut l'utiliser pour parcourir les packages existant et s'informer.  |
 |Question | In JavaScript, how can we **generate a UUID** compliant with RFC4122? |
 | | Avec un module Node.js, par exemple, avec uuid `const getUuid = require('uuid/v4'); getUuid();`  |
 |Question | In Node.js, how can we execute a function on a **periodic** basis? |
@@ -143,9 +143,9 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | How do we **define and build our own Docker image**?|
-| | *Enter your response here...*  |
+| | On construit une image à partir de `node`, on copie l'application js et les `package.json` puis on crée l'image avec `docker build`|
 |Question | How can we use the `ENTRYPOINT` statement in our Dockerfile?  |
-| | *Enter your response here...*  |
+| | On l'utilise pour démarrer l'application js  |
 |Question | After building our Docker image, how do we use it to **run containers**?  |
 | | `docker run image_name`  |
 |Question | How do we get the list of all **running containers**?  |
@@ -153,7 +153,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | How do we **stop/kill** one running container?  |
 | | `docker kill container_name`  |
 |Question | How can we check that our running containers are effectively sending UDP datagrams?  |
-| | *Enter your response here...*  |
+| |  |
 
 
 ## Task 4: implement an "auditor" Node.js application
@@ -165,11 +165,11 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 |Question | How can we use the `Map` built-in object introduced in ECMAScript 6 to implement a **dictionary**?  |
 | | `const mapName = new Map();` |
 |Question | How can we use the `Moment.js` npm module to help us with **date manipulations** and formatting?  |
-| | *Enter your response here...* |
+| | En utilisant la méthode `moment().format()` |
 |Question | When and how do we **get rid of inactive players**?  |
-| | *Enter your response here...* |
+| | On teste si le musicien a été actif dans les dernières 5 secondes, si ce n'est pas le cas, on le supprime de la map avec `myMap.delete(key)` |
 |Question | How do I implement a **simple TCP server** in Node.js?  |
-| | *Enter your response here...* |
+| | Avec le module `net` |
 
 
 ## Task 5: package the "auditor" app in a Docker image
@@ -177,7 +177,7 @@ When you connect to the TCP interface of the **Auditor**, you should receive an 
 | #  | Topic |
 | ---  | --- |
 |Question | How do we validate that the whole system works, once we have built our Docker image? |
-| | *Enter your response here...* |
+| | On effectue des tests manuellement et on valide avec le script `validate.sh` |
 
 
 ## Constraints
